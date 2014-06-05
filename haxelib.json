@@ -1,0 +1,10 @@
+{
+    "name": "asparticles",
+    "url": "https://github.com/UltraVisual/asparticles",
+    "license": "None",
+    "tags": ["asparticles"],
+    "description": "Haxe particle engine",
+    "version": "0.1.0",
+    "releasenote": "Initial haxe 3 version",
+    "contributors": ["ultravisual"]
+}
