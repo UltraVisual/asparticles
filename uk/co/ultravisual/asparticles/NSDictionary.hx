@@ -2,8 +2,8 @@ package uk.co.ultravisual.asparticles;
 import openfl.Assets;
 
 class NSDictionary {
-    var hash_:DynamicMap;
-    var data_:DynamicMap;
+    var hash_:Map<String, Dynamic>;
+    var data_:Map<String, Dynamic>;
     public var count (get_count, null):Int;
 
 /**
@@ -51,7 +51,7 @@ class NSDictionary {
 
 
     public function new() {
-        hash_ = new DynamicMap();
+        hash_ = new Map<String, Dynamic>();
     }
 
     public function release() {
@@ -76,9 +76,9 @@ class NSDictionary {
 
     }
 
-    function parseDictionary(xmlDict:Xml):DynamicMap {
+    function parseDictionary(xmlDict:Xml):Map<String, Dynamic> {
 
-        var h:DynamicMap = new DynamicMap();
+        var h:Map<String, Dynamic> = new Map<String, Dynamic>();
         var key:String = null;
 
         for (element in xmlDict.elements()) {
@@ -111,7 +111,7 @@ class NSDictionary {
         return h;
     }
 
-    function parseArray(dictArr:Xml):DynamicMap {
+    function parseArray(dictArr:Xml):Map<String, Dynamic> {
         return parseDictionary(dictArr);
     }
 
@@ -194,7 +194,7 @@ class NSDictionary {
     }
 
     public function removeAllObjects() {
-        hash_ = new DynamicMap();
+        hash_ = new Map<String, Dynamic>();
     }
 
     public function logAll() {
